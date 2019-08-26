@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ahihi^^!</title>
+</head>
+<body>
+<form>
+    <img id="myImage" src="https://scontent.fhan3-2.fna.fbcdn.net/v/t1.0-9/40100062_2288148988138950_6674789884231680000_n.jpg?_nc_cat=103&_nc_oc=AQnM3j00z0oeYja_phRMW4_W-_qs_3HIWqM5gXJotpl-pGBOBlMD3NHwhQpqbhSzlTU&_nc_ht=scontent.fhan3-2.fna&oh=42b5826656e01302a76424d2fb1fc6ab&oe=5E043848" />
+    <p>Click button below to move the image to right</p>
+    <input type="button" value="Click here"  onclick="moveRight();"/>
+</form>
+<script>
+    let imgObj=null;
+    imgObj=document.getElementById("myImage");
+    function init() {
+        imgObj=document.getElementById("myImage");
+        imgObj.style.position="relative";
+        imgObj.style.left="0px";
+    }
+    function moveRight() {
+        imgObj.style.left=parseInt(imgObj.style.left)+10+"px";
+    }
+    window.onload=init;
+</script>
+</body>
+</html>
